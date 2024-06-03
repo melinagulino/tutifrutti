@@ -21,9 +21,22 @@ from practica.tutifrutti import Tutifrutti
 
 
 def test_retornar_10_puntos_si_la_palabra_es_un_nombre():
+
     tutifrutti = Tutifrutti()
 
     assert tutifrutti.validar_palabra("melina") == 10
     assert tutifrutti.validar_palabra("Melina") == 10
+
+
+def test_retornar_0_si_la_palabra_no_es_un_nombre():
+    tutifrutti = Tutifrutti()
+
+    assert tutifrutti.validar_palabra("Vaca") == 0
+    assert tutifrutti.validar_palabra("melina9") == 0
+    assert tutifrutti.validar_palabra("") == 0
+    assert tutifrutti.validar_palabra("   ") == 0
+
+
+
 
 
